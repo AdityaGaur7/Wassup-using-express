@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Bitter:wght@500&family=Borel&family=Dancing+Script:wght@600&family=Dosis&family=Gajraj+One&family=Jost:wght@800&family=Mukta:wght@200;600&family=Poppins:ital@1&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+    font-family: 'Arvo', serif;
+/* font-family: 'Borel', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Dosis', sans-serif;
+font-family: 'Gajraj One', cursive;
+font-family: 'Jost', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #272727; 
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.chat{
+    width: 800px;
+    height: 90%;
+    border: 20%;
+    background: rgb(235, 229, 229);
+    box-shadow: 0 10px 15px -2px blue green;
+
+}
+.brand{
+    padding: 20px;
+    background:#1f2c34;
+   background:#121212;
+    display: flex;
+    align-items: center;
+
+}
+.brand h1{
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    color: rgb(252, 251, 251);
+    margin-left: 10px;
+ text-shadow:  4px  4px 2px rgb(35, 35, 35);
+}
+.message-area{
+    height: 500px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  /*overflow-x:hidden;*/
+    padding: 40px;
+    background: #09141a;
+   background:url('bg.jpg');
+ 
+
+}
+textarea{
+    width: 100%;
+    border: none;
+    outline: 0;
+    padding: 20px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 42px;
+    color: #efefef;
+    background:#1f2c34;
+ 
+}
+form{
+    background: #09141a;
+  background:#121212;
+    display: flex;
+    padding: 10px;
+   
+}
+.msg{
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    max-width: 300px;
+    position: relative;
+}
+.incoming{
+    background: #1f2c34;
+    color: rgb(244, 241, 241);
+    width: 20vw;
+    padding: 1vw;
+    border-top-right-radius:20px;
+    border-top-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+    margin-top: 1vh;
+
+}
+.incoming h4{
+    color: #17d8b2ed;
+    text-shadow: 5px 4px 1px rgb(25 24 26);
+    text-transform: uppercase;
+    font-family: 'Bitter', serif;
+
+}
+span{
+    color: #0ebc9a;
+}
+.outgoing{
+    background-color: #005d4b;
+    color: #f3f6f2;
+    margin-left: auto;
+    width: 20vw;
+    padding: 1vw;
+    margin-top: 1vh;
+    border-top-right-radius:20px;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius:20px ;
+}
+.outgoing h4{
+   font-family: 'Bitter', serif;
+   color: #fbfbf7;
+   text-shadow: 2px 2px 1px rgb(25 24 26);
+    text-transform: uppercase;
+
+}
+#btn{
+    /* border: 1px rgb(0, 0, 0); */
+    margin: 5px;
+    margin: 4px 0px;
+    background: #005d4b;
+    border: 0;
+    outline: 0;
+    color: #fbfafa;
+    border-radius: 50%;
+    padding: 1.3vw;
+}
+#btn:hover{
+    transform: translateY(-3px);
+}
+.msg h4{
+    position: absolute;
+    top: -20px;
+    
+    left: 0;
+    font-size: 14px;
+}
+@media (max-width:700px) {
+  .message-area{
+        background: url('chatbg.webp') no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .brand{
+        background: #0b1b24;
+    }
+    form{
+        background: #0b1b24;
+    }
+    .chat{
+        width: 86%;
+        height: 52%;
+        margin: 1rem;
+    }
+    .outgoing{
+        width: auto;
+        margin-top: 2vh;
+        padding:1vh 2vw;
+    }
+    .incoming{
+        width: auto;
+        margin-top: 2vh;
+        padding:1vh 2vw;
+    }
+    .outgoing h4{
+        padding: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    }
+    .outgoing p{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding: 1vw;
+    }
+    .incoming h4{
+        padding: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    }
+    .incoming p{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding: 1vw;
+    }
+    #btn{
+        padding: 5vw;
+    }
+}
