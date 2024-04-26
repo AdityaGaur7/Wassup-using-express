@@ -13,7 +13,7 @@ function outsound() {
   audio.play();
 }
 
-let pass = "a";
+let pass = "adgaur";
 function func1(id) {
   while (id != pass)
     id = prompt("The roomid you entered is invalid Try again");
