@@ -1,12 +1,23 @@
 const express = require('express');
 const fs = require('fs');
-const app = express();
+const http = require('http');
+const socketIO = require('socket.io');
 require('dotenv').config();
-const http = require('http').createServer(app);
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIO(server, {
+  cors: {
+    origin: "*",
+    credentials: true,
+    methods: ["GET", "POST"],
+  },
+});
+
 const PORT = process.env.PORT || 3000;
 
-http.listen(PORT, () => {
-  console.log(`listening on port ${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
 app.use(express.static(__dirname + '/public'));
@@ -22,13 +33,10 @@ app.get('/', (req, res) => {
   });
 });
 
-const io = require('socket.io')(http);
-
 io.on('connection', (socket) => {
-  console.log('connected...');
+  console.log('Connected to a client');
 
   socket.on('message', (msg) => {
-    // console.log(msg);
     socket.broadcast.emit('message', msg);
   });
 });
